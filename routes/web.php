@@ -14,21 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/profile', function(){
-	return "ini adalah profile";
-})->name('profile');
-
-Route::get('/tesname', function(){
-	return route('profile');
+Route::get('/about', function () {
+    return view('about');
 });
-
-Route::get('/profile/{id}', function($id){
-	return $id;
-});
-
-Route::get("/tescontroller", "TesController@show");
-
-Route::resource('siswa', "SiswaController");
